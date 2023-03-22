@@ -1,0 +1,122 @@
+<!-- click, mouseenter, mouseleave, submit, keydown, change -->
+<!-- inline -->
+<button onclick="handleClick()">Click me</button>
+
+<script>
+  function handleClick() {
+    alert('Button clicked!');
+  }
+</script>
+
+<!-- DOM Level 0 -->
+<button id="clickButton">Click me</button>
+
+<script>
+  const clickButton = document.getElementById('clickButton');
+  console.dir(clickButton)
+  clickButton.onclick = function() {
+    alert('Button clicked!');
+  };
+</script>
+
+<!-- DOM Level 2 -->
+
+<button id="clickButton">Click me</button>
+
+<script>
+  const clickButton = document.getElementById('clickButton');
+  clickButton.addEventListener('click', function() {
+    console.log('Button clicked!');
+  });
+  console.dir(clickButton)
+</script>
+
+<div id="mouseenterDiv">Hover over me</div>
+
+<script>
+  const mouseenterDiv = document.getElementById('mouseenterDiv');
+  mouseenterDiv.onmouseenter = function() {
+    alert('Mouse entered the element!');
+  };
+    console.dir(mouseenterDiv)
+</script>
+
+<div id="mouseenterDiv">Hover over me</div>
+
+<script>
+  const mouseenterDiv = document.getElementById('mouseenterDiv');
+  mouseenterDiv.addEventListener('mouseenter', function() {
+    alert('Mouse entered the element!');
+  });
+</script>
+
+<form id="submitForm">
+    <input type="submit" value="Submit">
+  </form>
+  
+  <script>
+    const submitForm = document.getElementById('submitForm');
+    submitForm.onsubmit = function(event) {
+      event.preventDefault();
+      alert('Form submitted!');
+    };
+  </script>
+
+
+  <form id="submitForm">
+    <input type="submit" value="Submit">
+  </form>
+  
+  <script>
+    const submitForm = document.getElementById('submitForm');
+    submitForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Form submitted!');
+    });
+  </script>
+
+
+<input type="text" id="keydownInput">
+
+<script>
+  const keydownInput = document.getElementById('keydownInput');
+  keydownInput.onkeydown = function(event) {
+    console.log('Key pressed:', event.key);
+  };
+</script>
+
+
+<input type="text" id="keydownInput">
+
+<script>
+  const keydownInput = document.getElementById('keydownInput');
+  keydownInput.addEventListener('keydown', function(event) {
+    console.log('Key pressed:', event.key);
+  });
+</script>
+
+
+<input type="text" id="changeInput">
+
+<script>
+  const changeInput = document.getElementById('changeInput');
+  changeInput.onchange = function(event) {
+    console.log('Input value changed:', event.target.value);
+  };
+</script>
+
+
+<input type="text" id="changeInput">
+
+<script>
+  const changeInput = document.getElementById('changeInput');
+  changeInput.addEventListener('change', function(event) {
+    console.log('Input value changed:', event.target.value);
+  });
+</script>
+
+
+  
+
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document Methods Example</title>
+  </head>
+  <body>
+    <h1 id="myHeading">Hello, world!</h1>
+    <p>Click the button to change the heading text color.</p>
+    <button id="myButton">Click me!</button>
+
+    <div id="myDiv"></div>
+
+    <script>
+      // Accessing elements
+      let heading = document.getElementById("myHeading");
+      let button = document.getElementById("myButton");
+      let div = document.getElementById("myDiv");
+
+      // Changing elements
+      button.addEventListener("click", function() {
+        heading.style.color = "red";
+      });
+
+      div.innerHTML = "This is a div element.";
+      div.className = "myClass";
+
+      let newElement = document.createElement("button");
+      newElement.innerHTML = "This is a new paragraph.";
+      div.appendChild(newElement);
+
+      // Event handling
+      let myFunction = function() {
+        alert("The mouse is over the heading element.");
+      };
+      heading.addEventListener("mouseover", myFunction);
+      heading.addEventListener("mouseout", function() {
+        alert("The mouse is no longer over the heading element.");
+        heading.removeEventListener("mouseover", myFunction);
+      });
+    </script>
+  </body>
+</html>

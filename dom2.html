@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <title>getElementById example</title>
+  </head>
+  <body>
+    <h1 id="para">Titulo de nuestro documento</h1>
+    <p id="para">Some text here</p>
+    <ul class="listado">
+      <li><a href="#">Red</a></li>
+      <li><a href="#">Green</a></li>
+      <li><a href="#">Blue</a></li>
+    </ul>
+    <button id="myButton">Click me!</button>
+    <script>
+      // ACCESSING ELEMENTS
+      // 1. getElementById
+      let element = document.getElementById("para");
+
+      // 2. getElementsByTagName
+      let tag = document.getElementsByTagName("h1");
+
+      // 3. getElementsByClassName
+      let class1 = document.getElementsByClassName("listado");
+
+      // 4. querySelector
+      let query = document.querySelector('.listado')
+
+      console.log(element)
+      // CHANGING ELEMENTS
+      element.style.background = "red"
+      class1[0].children[2].innerHTML = '<li><a href="######">Azul</a></li>';
+        //console.log(class1, "<--- post class2")
+
+      // EVENT HANDLING
+        document.getElementById("myButton").addEventListener('click', function() {
+            alert('BOTON')
+        })
+
+        
+
+    </script>
+  </body>
+</html>
